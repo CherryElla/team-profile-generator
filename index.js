@@ -1,8 +1,13 @@
-const inquirer = require("inquirer");
-// const managerClass = require("./lib/manager")
-import Manager from './lib/manager'
+// const inquirer = require("inquirer");
+import inquirer from "inquirer" 
 
-const fs = require("fs");
+import Manager from "./lib/manager.js"
+import Intern from "./lib/intern.js"
+import Engineer from "./lib/engineer.js"
+
+
+// const fs = require("fs");
+import fs from 'fs'
 
 let employees = {
     manager: null,
@@ -49,6 +54,7 @@ const start = () => {
 
 const menuChoice = (choice) => {
     console.log(choice)
+    console.log(employees)
     if (choice === "Add Intern") {
         addIntern();
     } else if (choice === "Add Engineer") {
@@ -89,7 +95,9 @@ const addIntern = () => {
             },
         ])
         .then((input) => {
-            menuChoice(input)
+            let intern = new Intern(input.name, input.id, input.email, input.school)
+            employees.interns.push(intern)
+            menuChoice(input.addEmployee)
         });
 };
 
@@ -124,7 +132,9 @@ const addEngineer = () => {
             },
         ])
         .then((input) => {
-            menuChoice(input)
+            let engineer = new Engineer(input.name, input.id, input.email, input.github)
+            employees.engineers.push(engineer)
+            menuChoice(input.addEmployee)
         });
 };
 
