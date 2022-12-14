@@ -4,6 +4,7 @@ import inquirer from "inquirer"
 import Manager from "./lib/manager.js"
 import Intern from "./lib/intern.js"
 import Engineer from "./lib/engineer.js"
+import { generateHTML } from "./src/render.js"
 
 
 // const fs = require("fs");
@@ -60,7 +61,7 @@ const menuChoice = (choice) => {
     } else if (choice === "Add Engineer") {
         addEngineer();
     } else {
-        generateHTML();
+        generateHTML("index.html", employees);
     }
 };
 
@@ -138,8 +139,6 @@ const addEngineer = () => {
         });
 };
 
-function generateHTML(fileName, data) {
-    fs.appendFile(file);
-}
+
 
 start();

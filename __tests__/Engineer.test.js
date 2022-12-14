@@ -1,1 +1,1 @@
-const jest = require("jest")
+import jest from "jest";
