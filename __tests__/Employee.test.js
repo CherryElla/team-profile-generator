@@ -1,4 +1,4 @@
-import jest from "jest";
+// import jest from "jest";
 import Employee from "../lib/employee.js"
 
 describe("Employee", () => {
@@ -14,7 +14,7 @@ describe("Employee", () => {
             expect(employee.name).toEqual(name)
             expect(employee.id).toEqual(id)
             expect(employee.email).toEqual(email)
-            expect(employee.role).toEqual(role)
+            expect(employee.getRole()).toEqual(role)
         })
         it("should give an error if no 'name' value given", () => {
             let cb = () => new Employee()
