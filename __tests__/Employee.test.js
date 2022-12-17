@@ -1,5 +1,6 @@
 // import jest from "jest";
-import Employee from "../lib/employee.js"
+// import Employee from "../lib/employee.js"
+const Employee = require("../lib/employee")
 
 describe("Employee", () => {
     describe("Start Test", () => {
@@ -7,7 +8,7 @@ describe("Employee", () => {
             let name = "Harry";
             let id = "rrr";
             let email = "test@test.com";
-            let role = "manager"
+            let role = "Employee"
             
             let employee = new Employee(name, id, email)
 
@@ -16,12 +17,17 @@ describe("Employee", () => {
             expect(employee.email).toEqual(email)
             expect(employee.getRole()).toEqual(role)
         })
+
+
         it("should give an error if no 'name' value given", () => {
-            let cb = () => new Employee()
+            let cb = () => {
+                new Employee()
+            }
             let error = new Error(
-                "Should have string in parameter"
+                "Please enter a valid name."
             )
             expect(cb).toThrowError(error)
         })
+        
     })
 } )
