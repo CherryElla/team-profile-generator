@@ -1,14 +1,11 @@
-// const inquirer = require("inquirer");
-import inquirer from "inquirer" 
-
-import Manager from "./lib/manager.js"
-import Intern from "./lib/intern.js"
-import Engineer from "./lib/engineer.js"
-import { generateHTML } from "./src/render.js"
+const inquirer = require("inquirer");
+const Intern = require("./lib/intern")
+const Engineer = require("./lib/engineer")
+const Manager = require("./lib/manager")
+const {TESTDATA, generateHTML} = require("./src/render")
 
 
 // const fs = require("fs");
-import fs from 'fs'
 
 let employees = {
     manager: null,
@@ -141,4 +138,5 @@ const addEngineer = () => {
 
 
 
-start();
+// start();
+generateHTML("index.html", TESTDATA)
