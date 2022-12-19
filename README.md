@@ -25,3 +25,4 @@
 
 https://github.com/CherryElla/team-profile-generator.git
 
+<img width="1625" alt="Screenshot 2022-12-18 at 7 57 25 PM" src="https://user-images.githubusercontent.com/111384784/208329838-e07e151b-1b48-499f-855e-3b91009c89a2.png">
