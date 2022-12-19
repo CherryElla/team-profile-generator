@@ -6,7 +6,7 @@ describe("Intern",() => {
             let name = "Tom";
             let id = 2
             let email = "dfdf@dfjj"
-            let role = "Intern"
+            let role = "🎓 Intern"
             let school = "Davidson School"
 
             let intern = new Intern(name,id,email,school)

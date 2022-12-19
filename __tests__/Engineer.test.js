@@ -6,7 +6,7 @@ describe("Engineer",() => {
             let name = "Tom";
             let id = 2
             let email = "dfdf@dfjj"
-            let role = "Engineer"
+            let role = "💻 Engineer"
             let github = "TomHarry"
 
             let engineer = new Engineer(name, id, email, github)

@@ -7,7 +7,7 @@ describe("Manager",() => {
         let name = "Tom";
         let id = 2
         let email = "dfdf@dfjj"
-        let role = "Manager"
+        let role = "🗣 Manager"
         let officNumb = 3434
 
         let manager = new Manager(name, id, email, officNumb)
